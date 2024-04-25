@@ -1,18 +1,21 @@
 {
-    "name": "travel-itinerary",
-    "version": "1.0.0",
-    "description": "",
-    "type": "module",
-    "main": "index.js",
-    "scripts": {
-        "dev": "node script.js"
-    },
-    "author": "Maya Goyle",
-    "license": "ISC",
-    "dependencies": {
-        "dotenv": "^16.4.5",
-        "express": "^4.19.2",
-        "nodemon": "^3.1.0",
-        "openai": "^4.38.3"
-    }
+  "name": "travel-itinerary",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "client/app.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js" 
+  
+  },
+  "author": "Maya Goyle",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "openai": "^4.38.4"
+  },
+  "keywords": []
 }
