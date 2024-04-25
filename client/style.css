@@ -1,10 +1,14 @@
-body, html {
+
+body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
   align-items: top; /* Centers content vertically */
   justify-content: center; /* Centers content horizontally */
+  background-color: #c6d9f7;
+  background-image: url("assets/images/pic.jpg");
+
 }
 
 .form-container {
@@ -21,8 +25,22 @@ form {
 
 input, button {
   margin: 10px 0; 
+
 }
 
 button {
   cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
 }
+
+ #result {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8ff;
+  width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(205, 220, 255, 0.1);
+  white-space: pre-wrap; /*Maintains whitespace formatting*/
+  visibility: hidden;
+ }

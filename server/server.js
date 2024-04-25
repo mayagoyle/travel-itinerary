@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 // app.get('/api', ...);
 //create middleware function to get functionality from app.js file
 app.post('/api/openai', async (req, res) => {
-    console.log('Received request body: ', req.body); // More descriptive log
+    console.log('Received request body: ', req.body); 
     const { model, messages } = req.body;
     if (!model || !messages) {
         console.error('Missing model or messages in the request');
@@ -36,10 +36,13 @@ app.post('/api/openai', async (req, res) => {
             model: model,
             messages: messages
         });
-        console.log('OpenAI API Response:', response.data);
-        res.json(response.data);
+        // console.log('OpenAI API response:', response); // Add this line
+        console.log('Here is your custom itinerary:', response.choices[0].message.content);
+        res.setHeader('Content-Type', 'application/json');
+        res.json(response.choices[0].message.content);
     } catch (error) {
         console.error('Error with OpenAI API:', error);
+        console.log('Error object:', error); 
         res.status(500).json({ error: error.message });
     }
 });
